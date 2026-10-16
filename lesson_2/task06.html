@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 6</title>
+</head>
+<body>
+	<main class="page-task06">
+		<section class="page-task05__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task06.html" class="list__link">
+						<h2 class="list__title">Задача 6</h2>
+						<p>
+							З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 6: З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+					
+					//1. Введення даних:
+					let quantityMilk = parseInt(prompt('Введіть кількість упаковок молока, шт.', '0'));
+					let priceMilk = parseFloat(prompt('Введіть ціну за одну упаковку молока', '0'));
+
+					let quantityCoffee = parseInt(prompt('Введіть кількість упаковок кави, шт.', '0'));
+					let priceCoffee = parseFloat(prompt('Введіть ціну за одну упаковку кави', '0'));
+
+					let quantityTea = parseInt(prompt('Введіть кількість упаковок чаю, шт.', '0'));
+					let priceTea = parseFloat(prompt('Введіть ціну за одну упаковку чаю', '0'));
+
+					//2. Розрахунок загальної ціни для кожного товару окремо
+					let totalPriceMilk = Math.round(quantityMilk * priceMilk);
+					let totalPriceCoffee = Math.round(quantityCoffee * priceCoffee);
+					let totalPriceTea = Math.round(quantityTea * priceTea);
+
+					//3. Рохрахунок загальної ціни для всіх товарів
+					let totalPrice = (totalPriceMilk + totalPriceCoffee + totalPriceTea);
+					
+					//4. Виведення результатів
+					document.write(`
+						<div class="solution__list list ">
+							<div class="list__item">
+								<h2 class="list__title">Результати:</h2>
+								<table>
+									<thead>
+										<tr>
+											<th>Найменування товару</th>
+											<th>Кількість, шт.</th>
+											<th>Вартість за одиницю.</th>
+											<th>Сума</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Молоко</td>
+											<td>${quantityMilk}</td>
+											<td>${priceMilk}</td>
+											<td>${totalPriceMilk}</td>
+										</tr>
+										<tr>
+											<td>Кава</td>
+											<td>${quantityCoffee}</td>
+											<td>${priceCoffee}</td>
+											<td>${totalPriceCoffee}</td>
+										</tr>
+										<tr>
+											<td>Чай</td>
+											<td>${quantityTea}</td>
+											<td>${priceTea}</td>
+											<td>${totalPriceTea}</td>
+										</tr>
+										<tr>
+											<td>Загальна сума:</td>
+											<td>..................</td>
+											<td>..................</td>
+											<td>${totalPrice}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

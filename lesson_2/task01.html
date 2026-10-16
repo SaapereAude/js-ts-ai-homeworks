@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 1</title>
+</head>
+<body>
+	<main class="page-task01">
+		<section class="page-task01__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task01.html" class="list__link">
+						<h2 class="list__title">Задача 1</h2>
+						<p>
+							Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 1: Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+					//1. Введення даних:
+					let firstNum = parseFloat(prompt('Будь ласка, введіть перше число: ', '0')); 
+					let secondNum = parseFloat(prompt('Будь ласка, введіть друге число: ', '0')); 
+
+					//2. Обчислення виразів на основі отриманих даних
+					// Сума
+					let sum = firstNum + secondNum;
+					// Добуток
+					let mult = firstNum * secondNum;
+					// Частка
+					let div = firstNum / secondNum;
+
+					//3. Виведення результатів обчислення виразів
+					document.write(`
+					<div class="solution__list list ">
+						<div class="list__item">
+							<h2 class="list__title">Результати:</h2>
+							<p>Перше число: ${firstNum}</p>
+							<p>Друге число: ${secondNum}</p>
+							<table>
+								<thead>
+									<tr>
+										<th>Операція</th>
+										<th>Результат</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Сума</td>
+										<td>${sum}</td>
+									</tr>
+									<tr>
+										<td>Добуток</td>
+										<td>${mult}</td>
+									</tr>
+									<tr>
+										<td>Частка</td>
+										<td>${div}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

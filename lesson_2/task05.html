@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 5</title>
+</head>
+
+<body>
+	<main class="page-task05">
+		<section class="page-task05__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task05.html" class="list__link">
+						<h2 class="list__title">Задача 5</h2>
+						<p>
+							Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 5: Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+
+					//1. Введення даних:
+					let seconds = parseInt(prompt('Введіть кількість секунд, що пройшло від початку доби', '0'));
+					const MINUTES = 60;
+					const HOURS = 3600;
+
+					//2. Обчислення:
+					let totalMinutes = Math.floor((seconds % HOURS) / MINUTES);
+					let totalHours = Math.floor(seconds / HOURS);
+
+					//3. Виведення результатів
+					document.write(`
+							<div class="solution__list list ">
+								<div class="list__item">
+									<h2 class="list__title">Результат: </h2>
+									<p>Час від початку доби: ${totalHours}год ${totalMinutes}хв</p>
+								</div>
+							</div>
+					`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 7</title>
+</head>
+<body>
+	<main class="page-task07">
+		<section class="page-task05__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task07.html" class="list__link">
+						<h2 class="list__title">Задача 7</h2>
+						<p>
+							Задача 7. Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 7: Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).
+					//1. Введення даних:
+					let minRandomMonth = 1; // мінімальний номер місяця
+					let maxRandomMonth = 12; // максимальний номер місяця
+					let minRandomDay = 1; // мінімальний номера дня
+					let maxRandomDay = 7; // максимальний номера дня
+					let randomMonth; // випадковий номера місяця
+					let randomDay; // випадковий номер дня
+					let sumMonthAndDay; // сума випадкового номера місяця та випадкового номера дня
+
+					//2. Розрахунок випадкового номера мысяця та випадкового номера дня
+					randomMonth = minRandomMonth + Math.floor(Math.random() * (maxRandomMonth - minRandomMonth + 1));
+					randomDay = minRandomDay + Math.floor(Math.random() * (maxRandomDay - minRandomDay + 1));
+					
+					//3. Розрахунок суми випадкового номера місяця та випадкового номера дня
+					sumMonthAndDay = randomMonth + randomDay;
+
+					//4. Виведення результатів
+					document.write(`
+							<div class="solution__list list ">
+								<div class="list__item">
+									<h2 class="list__title">Результати:</h2>
+									<p>Випадковий номер місяця: ${randomMonth}</p>
+									<p>Випадковий номер дня: ${randomDay}</p>
+									<p>Сума випадкового номера місяця та випадкового номера дня: ${sumMonthAndDay}</p>
+								</div>
+							</div>
+						`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

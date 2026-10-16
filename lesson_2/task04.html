@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 4</title>
+</head>
+<body>
+	<main class="page-task04">
+		<section class="page-task04__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task04.html" class="list__link">
+						<h2 class="list__title">Задача 4</h2>
+						<p>
+							Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 4: Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+					//1. Введення даних:
+					let centimeters = parseInt(prompt('Будь ласка, введіть довжину у сантиметрах', '0'));
+					const METRES_MULTIPLIER = Math.pow(10, -2); // множник для переводу з сантиметрів у метри
+					const KILOMETRES_MULTIPLIER = Math.pow(10, -5); // множник для переводу з сантиметрів у кілометри
+
+					//2. Конвертація сантиметрів у метри
+					let metres = centimeters * METRES_MULTIPLIER;
+
+					//3. Конвертація сантиметрів у кілометри
+					let kilometres = centimeters * KILOMETRES_MULTIPLIER;
+					
+					//4. Виведення результатів на сторінці
+					document.write(`
+							<div class="solution__list list ">
+								<div class="list__item">
+									<h2 class="list__title">Результати:</h2>
+									<p>Довжина у сантиметрах: ${centimeters}см</p>
+									<p>Довжина у метрах: ${metres}м</p>
+									<p>Довжина у кілометрах: ${kilometres}км</p>
+								</div>
+							</div>
+						`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

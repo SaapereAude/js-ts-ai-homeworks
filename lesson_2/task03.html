@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 3</title>
+</head>
+
+<body>
+	<main class="page-task03">
+		<section class="page-task03__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task03.html" class="list__link">
+						<h2 class="list__title">Задача 3</h2>
+						<p>
+							Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної
+							вартості).
+						</p>
+					</a>
+				</div>
+				<script>
+					"use strict"
+					//Задача 3: Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+					//1. Введення даних:
+					let quantity = parseInt(prompt('Введіть кількість товару', '0')); // кількість товару, parseInt - тому що товар разглядається як ціла одиниця товару
+					let price = parseFloat(prompt('Введіть вартість товару', '0')); // ціна за одиницю товару, parseFloat - тому що ціна може бути не цілим числом, а дійсним
+					const VALUE_ADDED_TAX = 5;
+
+					//2. Обчислення загальної вартості товару на основі отриманих даних
+					let totalCost = quantity * price;
+
+					//3. Обчислення ПДВ від загальнох вартості на основі отриманих даних
+					let vat = totalCost / 100 * VALUE_ADDED_TAX;
+
+					//4. Виведення результатів
+					document.write(`
+							<div class="solution__list list ">
+								<div class="list__item">
+									<h2 class="list__title">Результати:</h2>
+									<p>Загальна кількість одиниць товару: ${quantity} штук</p>
+									<p>Ціна за одиницю товару: ${price} грн</p>
+									<p>Загальна вартість товару: ${totalCost} грн</p>
+									<p>ПДВ від загальної вартості складає: ${vat.toFixed(2)} грн</p>
+								</div>
+							</div>
+						`);
+				</script>
+			</div>
+		</section>
+	</main>
+
+
+</body>
+
+</html>
