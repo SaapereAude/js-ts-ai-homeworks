@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 1</title>
+	<script src="js/task01.js"></script>
+</head>
+<body>
+	<main class="page-task01">
+		<section class="page-task01__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task01.html" class="list__link">
+						<h2 class="list__title">Задача 1</h2>
+						<p>
+							1.	З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.
+						</p>
+					</a>
+				</div>
+				<script>
+					// 3. Розв'язок та вивід на сторінку
+					document.write(`
+						<div class="solution__list list ">
+							<div class="list__item">
+								<h2 class="list__title">Результати:</h2>
+								<p>${firstChild} має ${firstChildsCandies} цукерок</p>
+								<p>${secondChild} має ${secondChildsCandies} цукерок</p>
+								<p class="list__result-text"><span>${firstChild}</span> має <span>${result}</span> цукерок ніж (як і) ${secondChild}</p>
+							</div>
+						</div>
+					`);
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

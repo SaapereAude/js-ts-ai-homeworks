@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Task 5</title>
+	<script src="js/task05.js"></script>
+</head>
+
+<body>
+	<main class="page-task05">
+		<section class="page-task05__section solution">
+			<div class="solution__container">
+				<div class="task-list__list list ">
+					<a target="_blank" href="task05.html" class="list__link">
+						<h2 class="list__title">Задача 5</h2>
+						<p>
+							5.	З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.
+						</p>
+					</a>
+				</div>
+				<script>
+					// 3. Розв'язок та вивід на сторінку
+					document.write(`
+						<div class="solution__list list ">
+						<div class="list__item">
+								<h2 class="list__title">Результати:</h2>
+								<p class="list__result-text">Категорія: ${driverCategory}. Ви можете керувати <span>${category}</span></p>
+							</div>
+						</div>
+					`);	
+				</script>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>
